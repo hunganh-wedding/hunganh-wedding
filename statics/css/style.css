@@ -844,24 +844,46 @@ h1 {
 @media (max-width: 560px) {
   .cover__sheet {
     min-height: 560px;
+    display: block;
+  }
+
+  .cover__sheet::before {
+    display: none;
+  }
+
+  .cover__content {
+    position: relative;
+    z-index: 1;
+    min-height: 560px;
+    padding: 78px 28px 58px;
   }
 
   .cover__ribbon {
+    z-index: 0;
     width: 24px;
     font-size: 0.72rem;
+    opacity: 0.96;
   }
 
   .cover__ribbon--left {
-    left: calc(50% - 48px);
+    left: 20px;
   }
 
   .cover__ribbon--right {
-    right: calc(50% - 48px);
+    right: 20px;
+  }
+
+  .cover__ribbon span {
+    max-height: 260px;
+    margin-top: auto;
+    margin-bottom: auto;
+    overflow: hidden;
   }
 
   .finger-heart {
     width: 126px;
     height: 112px;
+    margin-bottom: 18px;
   }
 
   .finger-heart span {
@@ -870,7 +892,28 @@ h1 {
   }
 
   .rings {
-    margin-bottom: 64px;
+    width: 164px;
+    margin: 16px 0 58px;
+    background:
+      linear-gradient(25deg, transparent 0 26%, var(--red) 27% 29%, transparent 30% 100%) left center / 52px 34px no-repeat,
+      linear-gradient(-25deg, transparent 0 26%, var(--red) 27% 29%, transparent 30% 100%) right center / 52px 34px no-repeat;
+  }
+
+  .rings::before {
+    left: 62px;
+  }
+
+  .rings::after {
+    right: 62px;
+  }
+
+  .cover__years {
+    font-size: 1.45rem;
+  }
+
+  .cover__invite {
+    font-size: 0.86rem;
+    letter-spacing: 0.12em;
   }
 
   .countdown {
