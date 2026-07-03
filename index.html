@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiệp cưới Quang Hưng &amp; Minh Anh</title>
+  <meta name="description" content="Trân trọng kính mời bạn tới dự lễ thành hôn của Quang Hưng và Minh Anh." />
+  <meta property="og:title" content="Thiệp cưới Quang Hưng & Minh Anh" />
+  <meta property="og:description" content="Trân trọng kính mời bạn tới dự lễ thành hôn của chúng tôi." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="statics/css/style.css" />
+</head>
+<body>
+  <audio id="bgMusic" loop preload="auto"></audio>
+
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Bật/tắt nhạc" aria-pressed="false">
+    <span class="music-toggle__mark" aria-hidden="true">♪</span>
+    <span data-music-label>Bật nhạc</span>
+  </button>
+
+  <nav class="nav" id="siteNav" aria-label="Điều hướng">
+    <a class="nav__brand" href="#home" data-couple-short>Quang Hưng &amp; Minh Anh</a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav__links" id="navLinks">
+      <a href="#invitation">Thiệp mời</a>
+      <a href="#events">Thông tin</a>
+      <a href="#schedule">Lịch trình</a>
+      <a href="#map">Chỉ đường</a>
+    </div>
+  </nav>
+
+  <main id="home">
+    <section class="cover" aria-label="Bìa thiệp cưới">
+      <div class="cover__sheet">
+        <div class="cover__ribbon cover__ribbon--left">
+          <span data-side-left>10 years gone. No refund.</span>
+        </div>
+        <div class="cover__ribbon cover__ribbon--right">
+          <span data-side-right>A decade down, still not tired of each other.</span>
+        </div>
+
+        <div class="cover__content">
+          <div class="finger-heart" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="cover__years">
+            <span data-from-year>2016</span>
+            <span data-to-year>2026</span>
+          </div>
+          <div class="rings" aria-hidden="true"></div>
+          <p class="cover__invite" data-invite-line>Trân trọng kính mời</p>
+          <div class="dotted-line" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="invitation reveal" id="invitation">
+      <div class="paper-panel paper-panel--split">
+        <article class="invitation__summary">
+          <p class="eyebrow">Lễ Thành Hôn</p>
+          <h1>
+            <span data-groom-display>Quang Hưng</span>
+            <span data-bride-display>Minh Anh</span>
+          </h1>
+          <div class="monogram" aria-hidden="true">H</div>
+          <p class="strong-line">Hôn lễ được tổ chức tại tư gia nhà trai</p>
+          <p>Số 23 ngõ 506 Bạch Mai, Bạch Mai, Hà Nội</p>
+          <p class="time-label">Vào lúc</p>
+          <p class="time" data-main-time>09:00 - CHỦ NHẬT</p>
+          <p class="date" data-date-display>12.07.2026</p>
+          <p class="lunar" data-lunar-main>Ngày 28 tháng 05 năm Bính Ngọ</p>
+          <p class="script-line">Rất hân hạnh được tiếp đón!</p>
+        </article>
+
+        <article class="invitation__formal">
+          <p class="eyebrow" data-invite-line>Trân trọng kính mời</p>
+          <div class="dotted-line" aria-hidden="true"></div>
+          <p class="formal-copy" data-formal-line>Tới dự tiệc mừng lễ thành hôn của hai con chúng tôi</p>
+          <h2 data-couple-full>Lê Quang Hưng &amp; Đoàn Minh Anh</h2>
+          <p class="strong-line">Hôn lễ được tổ chức</p>
+          <p>Tại <strong>TTTC Trống Đồng</strong></p>
+          <p>Số 2 Lãng Yên, Hồng Hà, Hà Nội</p>
+          <p class="time-label">Vào lúc <strong>11:00 - Chủ Nhật</strong></p>
+          <p class="date" data-date-display>12.07.2026</p>
+          <p class="lunar">Ngày 14 tháng 10 năm Bính Ngọ</p>
+          <p class="script-line" data-closing-line>Sự hiện diện của quý vị là niềm vinh hạnh cho gia đình chúng tôi.</p>
+          <div class="families">
+            <div>
+              <strong>Nhà Trai</strong>
+              <div id="groomParents"></div>
+            </div>
+            <div>
+              <strong>Nhà Gái</strong>
+              <div id="brideParents"></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section reveal" id="events">
+      <div class="section__heading">
+        <p class="eyebrow">Thông tin</p>
+        <h2>Ngày chung vui</h2>
+      </div>
+      <div class="countdown" id="countdown" aria-label="Đếm ngược tới ngày cưới">
+        <div><strong data-countdown-days>--</strong><span>Ngày</span></div>
+        <div><strong data-countdown-hours>--</strong><span>Giờ</span></div>
+        <div><strong data-countdown-minutes>--</strong><span>Phút</span></div>
+        <div><strong data-countdown-seconds>--</strong><span>Giây</span></div>
+      </div>
+      <div class="event-grid" id="eventCards"></div>
+    </section>
+
+    <section class="section section--cream reveal" id="schedule">
+      <div class="section__heading">
+        <p class="eyebrow">Lịch trình</p>
+        <h2>Các mốc chính</h2>
+      </div>
+      <div class="timeline" id="scheduleList"></div>
+    </section>
+
+    <section class="section reveal" id="map">
+      <div class="section__heading">
+        <p class="eyebrow">Chỉ đường</p>
+        <h2>Bản đồ</h2>
+      </div>
+      <div class="map-grid" id="mapGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="script-line">Thank You!</p>
+    <h2 data-couple-short>Quang Hưng &amp; Minh Anh</h2>
+    <p>Rất hân hạnh được đón tiếp và chung vui cùng bạn trong ngày trọng đại.</p>
+  </footer>
+
+  <script src="statics/js/config.js"></script>
+  <script src="statics/js/main.js"></script>
+</body>
+</html>
