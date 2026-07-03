@@ -83,7 +83,7 @@ window.WEDDING_CONFIG = {
   music: {
     enabledByDefault: true,
     volume: 0.58,
-    src: "statics/audio/wedding-song.mp3"
+    src: "statics/audio/All You Need Is Love.mp3"
   },
 
   page: {
